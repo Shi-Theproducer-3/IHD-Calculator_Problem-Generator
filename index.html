@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width initial-scale=1.0">
+    <title>IHD Calculator</title>
+    <link href="IHDCalc.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <Header>
+      <div>
+        <h1>IHD Calculator</h1>
+        <h1 id="main-num">0</h1>
+      </div>
+    </Header>
+    <main>
+      <div class="inputs">
+        <label for="valueOne" >Value 1</label>
+        <input type="number" id="value-one" name="valueOne" placeholder="0" required>
+        <label for="valueTwo">Value 2</label>
+        <input type="number" id="value-two" name="valueTwo" placeholder="0" required>
+      </div>
+      <div id="btns">
+        <button onclick="addVal()">Add</button>
+        <button onclick="sub()">Subtract</button>
+        <button onclick="mult()">Multiply</button>
+        <button onclick="divi()">Divide</button>
+        <button onclick="bClear()">*Blob*/Clear</button>
+      </div>
+      <p>Generate a random math equation by clicking <em>Generate</em>. Solve with the help of the calculator if needed!</p>
+      <button id="solo-btn" onclick="generateProblem()">Generate</button>
+      <div id="random-problem"></div>
+    </main>
+    <footer>
+      <p>If you've enjoyed the app/page think about giving a follow on <a href="https://twitter.com/IHD_NFTs">Twitter</a>. Thanks for spending your time here, hope it was beneficial and you enjoyed!</p>
+    </footer>
+    <script src="IHDCalc.js"></script>
+  </body>
+</html>
