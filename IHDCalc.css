@@ -1,68 +1,27 @@
 *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   color: white;
   font-family: 'Macondo', cursive;
   font-size: 24px;
 }
 
 body {
-  position: relative;
   text-align: center;
-  padding: 2rem .5rem;
-  margin: 0 0 3rem;
+  padding: .75rem .5rem;
+  margin: 0 0 1.5rem;
   background: radial-gradient(circle, rgba(0,0,0,1) 2%, rgba(19,15,61,1) 18%, rgba(72,61,139,1) 70%, rgba(5,136,162,1) 100%) no-repeat;
 }
 
-button {
-  font-family: 'Macondo', cursive;
-  font-size: 1.25rem;
-  border-bottom: double 5px rgba(5,136,162,1);
-  border-top: dashed 2px rgba(5,136,162,1);
-  background-color: transparent;
-  border-left: none;
-  border-right: none;
-  color: rgba(5,136,162,1);
-  padding: 6px;
-  width: 200px;
-  margin: 1.75rem 3px 0;
-  border-radius: 100%;
-  transition: .23s;
-  cursor: -webkit-grabbing;
-}
-
-button:hover {
-  background-color: rgba(0,0,0,0.23);
-  border: none;
-  border-radius: 0;
-}
-
-button:active {
-  border-radius: 100%;
-  color: transparent;
-}
-
 h1 {
-  margin: 0;
-  font-size: 4rem;
-  text-shadow: 0 6px 10px rgba(255,255,255,0.23), -3px -10px 5px rgba(0,0,0,0.41);
-}
-
-label {
-  -webkit-text-stroke: 1.33px rgba(5,136,162,1);
-  font-size: 2rem;
-}
-
-input {
-  margin: 1.25rem 2rem;
-  text-align: end;
-  color: rgba(5,136,162,1);
-  font-family: 'Macondo', cursive;
-  font-size: 1rem;
-  text-shadow: 6px 8px 5px rgba(0,0,0,0.29);
-  box-shadow: inset 6px 6px 5px rgba(0,0,0,0.32);
+  margin: 15px auto;
+  font-size: 3rem;
+  text-shadow: 0 6px 10px rgba(255,255,255,0.23), -3px -10px 5px rgba(0,0,0,0.41), -3px -4px 10px rgba(255,255,255,0.23), 2px 6px 5px rgba(0,0,0,0.41);
 }
 
 p {
-  margin: 3rem 1.5rem 0;
+  margin: .5% 1.5rem 1.5%;
   font-size: 1.3rem;
   border-bottom: dashed rgba(5,136,162,1) 3px;
 }
@@ -73,7 +32,7 @@ footer p {
   font-size: .9rem;
   font-weight: 700;
   border: none;
-  margin: 6rem 1.5rem 1rem;
+  margin: 12% 1.5rem 1rem;
   padding: 8px;
   box-shadow: 0 20px 10px rgba(0,0,0,0.23), -3px -10px 5px rgba(0,0,0,0.41);
 }
@@ -87,42 +46,178 @@ a:hover {
   opacity: 0;
 }
 
+small {
+  font-size: .7rem;
+  border: dotted 1px rgba(5,136,162,1);
+  padding: 1% .5%;
+  border-radius: 100%;
+  display: inline-block;
+  text-shadow: -3px -4px 10px rgba(255,255,255,0.23);
+  box-shadow: 0 20px 10px rgba(0,0,0,0.23), -3px -10px 5px rgba(0,0,0,0.41);
+}
+
 #main-num {
-  font-size: 7.5rem;
-  margin: 1rem;
+  font-size: 4.6rem;
+  margin: 3.3% 1rem 8.8%;
   border-radius: 100%;
   border-bottom: dashed rgba(5,136,162,1) 3px;
   -webkit-text-stroke: .33px rgba(5,136,162,1);
 }
 
-#btns {
-  padding: 0 1.5rem;
+#calc-comp {
+  width: 100%;
   display: flex;
-  flex: 1;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+}
+
+#user-values {
+  margin: 24px auto 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.value {
+  -webkit-text-stroke: 1.33px rgba(5,136,162,1);
+  font-size: 1.45rem;
+  margin: 2px auto;
+  width: 85%;
+  padding: 6px 3px;
+  background-color: rgba(72,61,139,0.34);
+  border-radius: 5px;
+  border: 1px solid rgba(5,136,162,1);
+  text-shadow: -3px -4px 10px rgba(255,255,255,0.23);
+  box-shadow: 0 20px 10px rgba(0,0,0,0.23), -3px -10px 5px rgba(0,0,0,0.41);
+}
+
+#value-one, #value-two {
+  font-size: 1.6rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: end;
+  text-shadow: -6px 8px 5px rgba(0,0,0,0.29);
+  box-shadow: inset 6px 6px 5px rgba(0,0,0,0.32);
+}
+
+#btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.calc-btns, #reveal-btn, #check-btn {
+  font-size: 1.25rem;
+  border-bottom: double 5px rgba(5,136,162,1);
+  border-top: dashed 2px rgba(5,136,162,1);
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  color: rgba(5,136,162,1);
+  padding: 6px;
+  width: 200px;
+  margin: 5% auto 0;
+  border-radius: 100%;
+  transition: .23s;
+  cursor: -webkit-grabbing;
+}
+
+.calc-btns:hover, #reveal-btn:hover, #check-btn:hover {
+  background-color: rgba(0,0,0,0.23);
+  border-radius: 0;
+  border-bottom: double 5px transparent;
+  border-top: dashed 2px transparent;
+}
+
+.calc-btns:active, #reveal-btn:active {
+  border-radius: 100%;
+  color: transparent;
+}
+
+#clear {
+  font-size: 1.5rem;
+  border-bottom: double 4px rgba(5,136,162,1);
+  border-top: dashed 1px rgba(5,136,162,1);
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  color: rgba(5,136,162,1);
+  padding: 6px 3px;
+  width: 250px;
+  margin: 5% auto 6.5%;
+  border-radius: 100%;
+  transition: .23s;
+  cursor: grab;
+}
+
+#clear:hover {
+  background-color: rgba(72,61,139,0.34);
+  border-radius: 0;
+  border-bottom: double 4px transparent;
+  border-top: dashed 1px transparent;
+}
+
+#clear:active, #solo-btn:active, #check-btn:active {
+  background-image: url("MBM Cartoon Cat Frens Collab.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 100%;
+  color: transparent;
+}
+
+#problem-comp {
+  width: 75%;
+  margin: 0 auto 2%;
+  background-color: rgba(19,15,61,0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid rgba(5,136,162,1);
+  box-shadow: 0 20px 10px rgba(0,0,0,0.23), -3px -10px 5px rgba(0,0,0,0.41);
+}
+
+#problem {
+  margin: 1.5% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  flex: 1;
 }
 
 #solo-btn {
+  font-size: 1.75rem;
+  font-weight: 700;
+  -webkit-text-stroke: .125px white;
+  border-bottom: double 12px rgba(19,15,61,1);
+  border-top: dashed 5px rgba(19,15,61,1);
   background-color: transparent;
-  margin: 3rem 0;
-  border: none;
-  cursor: none;
-}
-
-#solo-btn:hover {
-  font-size: 2rem;
-  color: transparent;
-  text-shadow: 0 15px 6px rgba(0,0,0,0.41);
+  border-left: none;
+  border-right: none;
+  color: rgba(19,15,61,1);
+  padding: 4.75% 3px;
+  width: 90%;
+  margin: 0 auto 5%;
+  border-radius: 100%;
+  transition: .23s;
+  cursor: -webkit-grabbing;
 }
 
 #random-problem {
-  font-size: 3rem;
-  margin: 0 8rem;
+  font-size: 2.25rem;
   padding: 4px;
   background-color: rgba(5,136,162,1);
-  -webkit-text-stroke: black 2px;
-  border: dashed black 1px;
+  -webkit-text-stroke: rgba(19,15,61,1) 2px;
+  border: dashed rgba(19,15,61,1) 1px;
   transition: .33s;
   cursor: none;
   box-shadow: 0 20px 10px rgba(0,0,0,0.23);
@@ -130,14 +225,26 @@ a:hover {
 
 #random-problem:hover {
   background-color: transparent;
-  border: none;
+  border: dashed transparent 1px;
   box-shadow: none;
 }
 
-.inputs {
-  margin: 1.25rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#answer-input {
+  color: rgba(19,15,61,1);
+  margin: 0 0 2%;
+  flex: 1;
+  font-size: 1.45rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+  text-shadow: -6px 8px 5px rgba(0,0,0,0.29);
+  box-shadow: inset 6px 6px 5px rgba(0,0,0,0.32);
+}
+
+#answer-input:hover {
+  background-image: url("MBM Cartoon Cat Frens Collab.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
